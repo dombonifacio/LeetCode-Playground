@@ -7,19 +7,29 @@ class Solution:
         # loop through the array starting with [0], another loop for i + 1 until end
 
         # the stock on ith day must be greater than price[i] in order to chan
-        max = 0
+        profit = 0
         
 
         # TODO:[7,1,5,3,6,4] -> output 6. Day 5, index 4
         # TODO: [7,6,4,3,1] -> output 0
+        # TODO: [3,10,4,12] -> output 9
+        
+        l = 0
+        r = l + 1
+
+        profit = 0
+        max_price = max(prices)
+        
         for i in range(len(prices)):
-            for j in range(i + 1, len(prices)):
-                if prices[i] < prices[j]:
-                    if prices[j] - prices[i] > max:
-                        max = prices[j] - prices[i]
+            # get the max val of the array
+            # check if the nums being compared is larger than the max
+            # 
+            if prices[i] > max_price:
+                profit = prices[i] - 
+
                     
            
-        return max
+        return max_price
                 
         
 
