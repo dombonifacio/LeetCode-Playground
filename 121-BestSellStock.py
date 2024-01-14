@@ -13,23 +13,39 @@ class Solution:
         # TODO:[7,1,5,3,6,4] -> output 6. Day 5, index 4
         # TODO: [7,6,4,3,1] -> output 0
         # TODO: [3,10,4,12] -> output 9
-        
+        # TODO: [2,1,4] -> output 3
         l = 0
-        r = l + 1
+        r = len(prices) - 1
+        current_profit = 0
+    
 
-        profit = 0
-        max_price = max(prices)
+        while l < r:
+            if prices[l] >= prices[r]:
+               
+                r-=1
+                
+                
+            elif prices[l] < prices[r]:
+                current_profit = prices[r] - prices[l]
+                profit = max(profit, current_profit)
+                l+=1
+                
+                    
+        return profit
+
+        # profit = 0
+        # max_price = max(prices)
         
-        for i in range(len(prices)):
-            # get the max val of the array
-            # check if the nums being compared is larger than the max
-            # 
-            if prices[i] > max_price:
-                profit = prices[i] - 
+        # for i in range(len(prices)):
+        #     # get the max val of the array
+        #     # check if the nums being compared is larger than the max
+        #     # 
+        #     if prices[i] > max_price:
+        #         profit = prices[i] - 
 
                     
            
-        return max_price
+       # return max_price
                 
         
 
